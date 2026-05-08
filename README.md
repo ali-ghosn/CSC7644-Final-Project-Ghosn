@@ -47,31 +47,31 @@ This project focuses on validated tool execution rather than autonomous behavior
 
 ```text
 ┌─────────────────────┐
-│      User Input      │
+│      User Input     │
 └─────────┬───────────┘
           │
           ▼
 ┌─────────────────────┐
-│     LLM Planner      │
-│  (Strict JSON Out)   │
+│     LLM Planner     │
+│  (Strict JSON Out)  │
 └─────────┬───────────┘
           │
           ▼
 ┌────────────────────────────────────────────┐
-│               Controller Loop               │
+│               Controller Loop              │
 │ Parse → Validate → Resolve → Execute       │
 └──────────────────┬─────────────────────────┘
                    │
         ┌──────────┴──────────┐
         ▼                     ▼
 ┌─────────────────┐   ┌──────────────────┐
-│ JSON Schema      │   │  Tool Executor   │
-│ Validation       │   │  via Registry    │
+│ JSON Schema     │   │  Tool Executor   │
+│ Validation      │   │  via Registry    │
 └─────────────────┘   └────────┬─────────┘
                                 │
                                 ▼
                       ┌──────────────────┐
-                      │   Final Output    │
+                      │   Final Output   │
                       └──────────────────┘
 ```
 
