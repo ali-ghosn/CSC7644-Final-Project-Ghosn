@@ -4,7 +4,7 @@
 # CSC 7644: Applied LLM Development
 # ──────────────────────────────────────────────
 
-# OpenAI API client (used in Phase 2+)
+# OpenAI API client
 openai>=1.30.0
 
 # JSON Schema validation (core to controller validation loop)
