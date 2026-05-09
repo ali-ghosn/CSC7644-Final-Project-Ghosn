@@ -107,6 +107,7 @@ User Input → LLM Planner → JSON Plan → Controller Loop → Tool Executor �
 - Python **3.11 or higher**
 - `pip`
 - An OpenAI API key — [platform.openai.com](https://platform.openai.com/account/api-keys)
+- **WSL users:** Ubuntu 22.04 or 24.04 recommended (Ubuntu 26.04 has known venv packaging issues)
 
 ### 1. Clone
 
