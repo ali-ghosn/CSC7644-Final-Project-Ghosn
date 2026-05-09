@@ -569,8 +569,6 @@ CSC7644-Final-Project-Ghosn/
 - [python-dotenv](https://github.com/theskumar/python-dotenv) — environment variable management
 - [PEP 8](https://peps.python.org/pep-0008/) — code style standard followed throughout
 
-All implementations are original. No external code was adapted or copied.
-
 ---
 
 *CSC 7644: Applied LLM Development — Louisiana State University*
