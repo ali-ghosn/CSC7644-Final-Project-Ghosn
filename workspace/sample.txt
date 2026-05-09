@@ -1,0 +1,19 @@
+AI Task Decomposition Copilot — Sample Workspace File
+======================================================
+
+This file exists to demonstrate the sandboxed file.read tool.
+
+The file.read tool will ONLY access files inside this workspace/ directory.
+Any attempt to read files outside this boundary will be rejected with a
+PermissionError before the filesystem is ever touched.
+
+Project: CSC 7644 — Applied LLM Development
+Tool:    file.read
+Path:    workspace/sample.txt
+
+--- Sample Data ---
+task_id: T-001
+description: Demonstrate deterministic tool execution
+status: complete
+steps_executed: 4
+duration_ms: 312

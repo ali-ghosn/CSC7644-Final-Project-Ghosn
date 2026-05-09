@@ -1,0 +1,25 @@
+Architecture Notes — AI Task Decomposition Copilot
+===================================================
+
+Core Components
+---------------
+1. LLM Planner   : Converts natural language tasks → strict JSON execution plans
+2. Controller    : Parses, validates, and executes each step sequentially
+3. Tool Registry : Maps tool names → Python callables
+4. Validators    : JSON Schema checks before any tool is called
+5. Path Utils    : Sandbox enforcement for file.read
+
+Key Design Decisions
+--------------------
+- No LangChain or agent frameworks — pure Python + OpenAI API
+- Synchronous, sequential execution only (deterministic and debuggable)
+- Schema validation as a hard gate before every tool call
+- file.read restricted to ./workspace/ via realpath boundary check
+- Retry loop capped at 3 attempts (configured via MAX_RETRIES)
+
+Security Constraints
+--------------------
+- No shell execution
+- No arbitrary code execution
+- No unrestricted filesystem access
+- Absolute paths and path traversal rejected at multiple layers
