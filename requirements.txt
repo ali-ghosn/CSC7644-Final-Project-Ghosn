@@ -1,0 +1,21 @@
+
+# ──────────────────────────────────────────────
+# AI Task Decomposition Copilot — Dependencies
+# CSC 7644: Applied LLM Development
+# ──────────────────────────────────────────────
+
+# OpenAI API client (used in Phase 2+)
+openai>=1.30.0
+
+# JSON Schema validation (core to controller validation loop)
+jsonschema>=4.22.0
+
+# Environment variable loading
+python-dotenv>=1.0.0
+
+# Testing
+pytest>=8.0.0
+pytest-cov>=5.0.0
+
+# Typing support (stdlib in 3.11, but explicit for clarity)
+typing_extensions>=4.11.0
