@@ -3,13 +3,13 @@
 **CSC 7644: Applied LLM Development — Final Project**
 Louisiana State University
 
-A deterministic, schema-constrained LLM application that converts natural language technical tasks into validated, step-by-step JSON execution plans and executes them through a sequential controller loop.
+An LLM application that converts natural language technical tasks into validated, step-by-step JSON execution plans and executes them through a sequential controller loop.
 
 ---
 
 ## Overview
 
-Given a natural language task like:
+When given a natural language task like:
 
 > *"Add 3 and 5, then multiply the result by 2"*
 
@@ -41,14 +41,14 @@ This is **not** a general autonomous agent. It is a controlled, deterministic, d
 
 ```
 ┌──────────────────────┐
-│      User Input       │  Natural language task string
+│      User Input      │  Natural language task string
 └──────────┬───────────┘
            │
            ▼
 ┌──────────────────────┐
-│     LLM Planner       │  openai.chat.completions (temperature=0, seed=42)
-│  (Strict JSON Only)   │  System prompt built from TOOL_METADATA at runtime
-│                       │  Retry loop: up to MAX_RETRIES on malformed output
+│     LLM Planner      │  openai.chat.completions (temperature=0, seed=42)
+│  (Strict JSON Only)  │  System prompt built from TOOL_METADATA at runtime
+│                      │  Retry loop: up to MAX_RETRIES on malformed output
 └──────────┬───────────┘
            │
            │  {"steps": [{"step_id": ..., "tool": ..., "arguments": {...}}, ...]}
@@ -569,7 +569,7 @@ CSC7644-Final-Project-Ghosn/
 - [python-dotenv](https://github.com/theskumar/python-dotenv) — environment variable management
 - [PEP 8](https://peps.python.org/pep-0008/) — code style standard followed throughout
 
-All implementation is original. No external code was adapted or copied.
+All implementations are original. No external code was adapted or copied.
 
 ---
 
